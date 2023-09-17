@@ -6,12 +6,13 @@
 #    By: anchaouk <anchaouk@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/05/20 11:45:24 by abelfany          #+#    #+#              #
-#    Updated: 2023/08/28 22:04:51 by anchaouk         ###   ########.fr        #
+#    Updated: 2023/08/31 18:43:31 by anchaouk         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 HEADER = minishell.h
 NAME = minishell
+
 READLINE= /Users/$(USER)/.brew/Cellar/readline/8.2.1/lib
 INCLUDE= /Users/$(USER)/.brew/Cellar/readline/8.2.1/include
 

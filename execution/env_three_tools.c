@@ -6,7 +6,7 @@
 /*   By: anchaouk <anchaouk@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/24 15:18:53 by anchaouk          #+#    #+#             */
-/*   Updated: 2023/08/27 12:24:40 by anchaouk         ###   ########.fr       */
+/*   Updated: 2023/08/31 14:25:32 by anchaouk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,9 +43,9 @@ void	ft_recheck(t_env *envr)
 	s = 0;
 	while (ptr)
 	{
-		if (strcmp(ptr->name, "OLDPWD") == 0)
+		if (ft_strcmp(ptr->name, "OLDPWD") == 0)
 			f = 1;
-		if (strcmp(ptr->name, "SHLVL") == 0)
+		if (ft_strcmp(ptr->name, "SHLVL") == 0)
 			s = 1;
 		ptr = ptr->next;
 	}

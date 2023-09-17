@@ -6,11 +6,19 @@
 /*   By: anchaouk <anchaouk@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/22 12:00:16 by anchaouk          #+#    #+#             */
-/*   Updated: 2023/08/23 16:29:40 by anchaouk         ###   ########.fr       */
+/*   Updated: 2023/08/31 16:16:41 by anchaouk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "minishell.h"
+
+int	ft_isoverflow(int sign)
+{
+	if (sign == -1)
+		return (0);
+	else
+		return (-1);
+}
 
 unsigned long long	ft_atoi(char *str, size_t i, t_env *envr)
 {
@@ -32,9 +40,9 @@ unsigned long long	ft_atoi(char *str, size_t i, t_env *envr)
 	{
 		prev = result;
 		result = result * 10 + (str[i] - '0');
+		if ((result / 10) != prev)
+			ft_exit_error(str, 0, envr);
 		i++;
 	}
-	if (result > 9223372036854775807)
-		ft_exit_error(str, 0, envr);
 	return (result * sign);
 }

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   expand.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: abelfany <abelfany@student.42.fr>          +#+  +:+       +#+        */
+/*   By: anchaouk <anchaouk@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/11 22:34:23 by abelfany          #+#    #+#             */
-/*   Updated: 2023/08/30 19:40:08 by abelfany         ###   ########.fr       */
+/*   Updated: 2023/08/31 14:40:38 by anchaouk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -68,7 +68,7 @@ void	check_expand_new(char *str, int *x, t_creat **res, t_env *env)
 			u.a++;
 	}
 	(*x) = u.a;
-	if (u.join[0] != 0)
+	if (u.join && u.join[0] != 0)
 		insert(res, u.join, "CMD", 0);
 	else
 		free(u.join);

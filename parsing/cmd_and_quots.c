@@ -6,7 +6,7 @@
 /*   By: anchaouk <anchaouk@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/19 23:56:05 by abelfany          #+#    #+#             */
-/*   Updated: 2023/08/28 22:20:27 by anchaouk         ###   ########.fr       */
+/*   Updated: 2023/08/31 16:25:50 by anchaouk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -90,7 +90,8 @@ void	who_first(char *str, int *x, t_creat **res, t_env *env)
 		if (str[u.b] == '|' || !str[u.b] 
 			|| !exist(str[u.b]) || is_wts(str[u.b]))
 			break ;
-		u.b++;
+		if (str[u.b] != '$')
+			u.b++;
 	}
 	(*x) = u.b;
 	insert(res, u.word, "CMD", 0);

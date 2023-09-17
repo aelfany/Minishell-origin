@@ -6,7 +6,7 @@
 /*   By: anchaouk <anchaouk@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/13 15:27:15 by anchaouk          #+#    #+#             */
-/*   Updated: 2023/08/26 23:27:06 by anchaouk         ###   ########.fr       */
+/*   Updated: 2023/08/31 18:36:26 by anchaouk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -83,7 +83,7 @@ static char	**fillup_exec_env(t_env *envr, int i)
 			continue ;
 		}
 		env[i] = ft_strjoin(ptr->name, "=");
-		env[i] = ft_strjoin(env[i], ptr->value);
+		env[i] = ft_strjoin_free(env[i], ptr->value, 1, 0);
 		i++;
 		ptr = ptr->next;
 	}

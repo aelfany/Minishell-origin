@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   read_input.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: abelfany <abelfany@student.42.fr>          +#+  +:+       +#+        */
+/*   By: anchaouk <anchaouk@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/06 14:20:31 by abelfany          #+#    #+#             */
-/*   Updated: 2023/08/31 14:03:26 by abelfany         ###   ########.fr       */
+/*   Updated: 2023/08/31 16:23:57 by anchaouk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,7 +43,7 @@ int	check_error(char *str, int x)
 {
 	t_var	u;
 
-	u.a = x;
+	u.a = x - 1;
 	u.flag = 0;
 	u.sv = 0;
 	while (str[u.a] && str[u.a++] == '|')

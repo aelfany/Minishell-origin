@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   expand_fun.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: abelfany <abelfany@student.42.fr>          +#+  +:+       +#+        */
+/*   By: anchaouk <anchaouk@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/06 14:19:37 by abelfany          #+#    #+#             */
-/*   Updated: 2023/08/31 14:13:51 by abelfany         ###   ########.fr       */
+/*   Updated: 2023/08/31 18:40:00 by anchaouk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,7 +44,7 @@ char	*expand_hrd(t_env *env, int count, char *word)
 			{
 				free(word);
 				word = NULL;
-				while (env -> value[++a])
+				while (env->value && env -> value[++a])
 					word = _remallc(word, env -> value[a]);
 			}
 			return (word);
@@ -85,7 +85,7 @@ char	*expand(t_env *env, int count, char *word)
 				free(word);
 				word = split_expand(env -> value);
 				if (word == NULL)
-					while (env -> value[++a])
+					while (env->value && env -> value[++a])
 						word = _remallc(word, env -> value[a]);
 			}
 			return (word);

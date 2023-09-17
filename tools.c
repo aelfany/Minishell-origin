@@ -6,7 +6,7 @@
 /*   By: anchaouk <anchaouk@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/16 19:09:55 by anchaouk          #+#    #+#             */
-/*   Updated: 2023/08/28 19:45:08 by anchaouk         ###   ########.fr       */
+/*   Updated: 2023/08/31 16:14:48 by anchaouk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,6 +39,5 @@ int	ft_lenstrs(char **strs)
 
 void	ft_exit_p(int i)
 {
-	ft_putstr_fd("exit", 2);
 	exit(i);
 }

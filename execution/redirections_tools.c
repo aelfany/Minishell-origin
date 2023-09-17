@@ -6,7 +6,7 @@
 /*   By: anchaouk <anchaouk@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/24 21:59:19 by anchaouk          #+#    #+#             */
-/*   Updated: 2023/08/24 21:59:42 by anchaouk         ###   ########.fr       */
+/*   Updated: 2023/08/31 16:04:58 by anchaouk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,10 +27,6 @@ int	ft_check_last(t_creat *res)
 	while (ptr)
 	{
 		if (ft_strcmp(ptr->token, "RDIN") == 0)
-			i = 0;
-		else if (ft_strcmp(ptr->token, "RDOUT") == 0)
-			i = 0;
-		else if (ft_strcmp(ptr->token, "RD_AP") == 0)
 			i = 0;
 		else if (ft_strcmp(ptr->token, "HRD_DQ") == 0)
 			i = 1;
